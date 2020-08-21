@@ -1,0 +1,13 @@
+@font-face {
+    font-family: UnlightFont1;
+    src: url('../fonts/nbr.ttf')format("truetype");
+}
+@font-face{
+    font-family: UnlightFont2;
+    src: url('../fonts/wt004.ttf')format("truetype");
+}
+
+html{
+    background-color:#343a40;
+    position:relative;
+}
