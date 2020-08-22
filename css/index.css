@@ -11,3 +11,8 @@ html{
     background-color:#343a40;
     position:relative;
 }
+
+.title{
+    font-family: UnlightFont1;
+    font-size :64pt;
+}
