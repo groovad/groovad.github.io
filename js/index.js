@@ -88,7 +88,7 @@ function render(data) {
 };
 
 (function(){
-    const REQUESTURL = 'https://raw.githubusercontent.com/groovad/groovad.github.io/gh-pages/data/characard.json';
+    const REQUESTURL = './data/characard.json';
 
     const resultListPanel = function(data){
         $cardData = data;
