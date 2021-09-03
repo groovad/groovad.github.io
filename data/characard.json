@@ -505,7 +505,7 @@
 	,
 	{"cardId":252,"charaName":"沃肯","level":"L2","hp":8,"atk":3,"def":7,"slotColor":[5,5],"cost":11,"imageName":"ch26","charaId":26,"available":true}
 	,
-	{"cardId":253,"charaName":"沃肯","level":"L3","hp":9,"atk":3,"def":8,"slotColor":[5,5],"cost":15,"imageName":"ch26","charaId":26,"available":true}
+	{"cardId":253,"charaName":"沃肯","level":"L3","hp":9,"atk":3,"def":8,"slotColor":[5,5],"cost":15,"imageName":"ch26_03","charaId":26,"available":true}
 	,
 	{"cardId":254,"charaName":"沃肯","level":"L4","hp":9,"atk":4,"def":9,"slotColor":[5,5,6],"cost":15,"imageName":"ch26","charaId":26,"available":true}
 	,
