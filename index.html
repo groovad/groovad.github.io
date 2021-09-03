@@ -2,12 +2,41 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Mechanics</title>
+    <title>Title</title>
+    <script defer type="text/javascript" src="./js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="/css/index.css">
-    <script type="text/javascript" src="/js/jquery-3.4.1.js" charset="utf-8"></script>
-    <script type="text/javascript" src="/js/over.js" charset="utf-8"></script>
   </head>
   <body>
-    <h1>Temp Text</h1>
+    <div class="banner">
+        <h1>簡易檢索工具</h1>
+    </div>
+    <div class="container">
+
+        <div class="checker-area">
+          <div class="input-cost">
+            <label>Cost:</label>
+            <input type="number" id="input-min-cost" min="1" max="50" value="1" step="1" onchange="inputMin()">
+            <input type="number" id="input-max-cost" min="1" max="50" value="50" step="1" onchange="inputMax()">
+            <div class="double-ranged-slider">
+              <input type="range" id="min-cost" min="1" max="50" value="1" step="1" oninput="slideMin()">
+              <input type="range" id="max-cost" min="1" max="50" value="50" step="1" oninput="slideMax()">
+            </div>
+          </div>
+          <div>
+            <button id="search-btn" type="button">檢索</button>
+          </div>
+          
+        </div>
+
+        <div class="result-area">
+          <h2>Result</h2>
+          <ul id="result-list">
+
+          </ul>
+        </div>
+
+        <div class="footer"></div>
+    </div>
   </body>
 </html>
