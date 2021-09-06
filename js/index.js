@@ -32,7 +32,6 @@ function deleteLastSlotFilterList() {
     let count = document.querySelectorAll(".btn-change-slot").length;
     if (count > 0) {
         let removeTarget = document.getElementById(`slot-${count}`);
-        console.log(removeTarget)
         removeTarget.remove();
     }
 }
@@ -108,9 +107,7 @@ function doSearch(){
                 let copiedList = Array.from(slotFilterList);
                 data.slotColor.forEach( function(color) {
                     if (copiedList.includes(color)) {
-                        console.log(color);
                         copiedList.shift();
-                        console.log(slotFilterList);
                     }
                 })
                 if (copiedList.length == 0) { $showData.push(data); }
