@@ -14,14 +14,38 @@
     <div class="container">
 
         <div class="checker-area">
-          <div class="input-cost">
-            <label>Cost:</label>
-            <input type="number" id="input-min-cost" min="1" max="50" value="1" step="1" onchange="inputMin()">
-            <input type="number" id="input-max-cost" min="1" max="50" value="50" step="1" onchange="inputMax()">
+          <div class="level-filter">
+            <ul class="check-box-filter check-level-list">
+              <li><label><input type="checkbox" name="level" id="L1" value="L1" checked="checked"><span>L1</span></label></li>
+              <li><label><input type="checkbox" name="level" id="L2" value="L2" checked="checked"><span>L2</span></label></li>
+              <li><label><input type="checkbox" name="level" id="L3" value="L3" checked="checked"><span>L3</span></label></li>
+              <li><label><input type="checkbox" name="level" id="L4" value="L4" checked="checked"><span>L4</span></label></li>
+              <li><label><input type="checkbox" name="level" id="L5" value="L5" checked="checked"><span>L5</span></label></li>
+              <li><label><input type="checkbox" name="level" id="R1" value="R1" checked="checked"><span>R1</span></label></li>
+              <li><label><input type="checkbox" name="level" id="R2" value="R2" checked="checked"><span>R2</span></label></li>
+              <li><label><input type="checkbox" name="level" id="R3" value="R3" checked="checked"><span>R3</span></label></li>
+              <li><label><input type="checkbox" name="level" id="R4" value="R4" checked="checked"><span>R4</span></label></li>
+              <li><label><input type="checkbox" name="level" id="R5" value="R5" checked="checked"><span>R5</span></label></li>
+            </ul>
+          </div>
+
+          <div class="slot-filter">
+            <div class="checker-label">Slot:</div>
+            <button class="btn-del-slot" type="button" onclick="deleteLastSlotFilterList()">－</button>
+            <ul class="slot-filter-list">
+              
+            </ul>
+            <button class="btn-add-slot" type="button" onclick="addToSlotFilterList()">＋</button>
+          </div>
+
+          <div class="cost-filter">
+            <div class="checker-label">Cost:</div>
+            <input type="number" id="input-min-cost" min="8" max="38" value="8" step="1" onchange="inputMin()">
             <div class="double-ranged-slider">
-              <input type="range" id="min-cost" min="1" max="50" value="1" step="1" oninput="slideMin()">
-              <input type="range" id="max-cost" min="1" max="50" value="50" step="1" oninput="slideMax()">
+              <input type="range" id="min-cost" min="8" max="38" value="8" step="1" oninput="slideMin()">
+              <input type="range" id="max-cost" min="8" max="38" value="38" step="1" oninput="slideMax()">
             </div>
+            <input type="number" id="input-max-cost" min="8" max="38" value="38" step="1" onchange="inputMax()">
           </div>
           <div>
             <button id="search-btn" type="button">檢索</button>
