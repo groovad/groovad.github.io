@@ -103,16 +103,20 @@ function doSearch(){
 
     $cardData.forEach( function (data) {
         if (data.cost >=minCostValue && data.cost <=maxCostValue && checkedLevels.includes(data.level)){
-            if (data.slotColor.length >= slotFilterList.length) {
-                let copiedList = Array.from(slotFilterList);
-                data.slotColor.forEach( function(color) {
-                    if (copiedList.includes(color)) {
-                        copiedList.shift();
-                    }
-                })
-                if (copiedList.length == 0) { $showData.push(data); }
-            } else if (slotFilterList.length == 0) {
+            if (slotFilterList.length == 0) {
                 $showData.push(data);
+            } else if (data.slotColor.length >= slotFilterList.length) {
+                let p_filter = 0,p_data = 0;
+                do{
+                    if (slotFilterList[p_filter] == data.slotColor[p_data]){
+                        p_filter++;
+                        p_data++;
+                    } else {
+                        p_data++;
+                    }
+                    console.log(`${p_filter},${p_data}`);
+                } while(p_filter<slotFilterList.length && p_data<data.slotColor.length);
+                if (p_filter == slotFilterList.length) { $showData.push(data); }
             }
         }
     });
