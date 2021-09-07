@@ -726,7 +726,7 @@ input[type=number]::-webkit-outer-spin-button {
   }
   
   .checker-area {
-    width: 100%;
+    width: 410px;
   }
 
   .result-area {
