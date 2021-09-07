@@ -2,17 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Title</title>
+    <title>簡易篩選工具</title>
     <script defer type="text/javascript" src="./js/index.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="/css/index.css">
   </head>
   <body>
     <div class="banner">
-        <h1>簡易檢索工具</h1>
+        <h1>簡易篩選工具</h1>
     </div>
     <div class="container">
-
         <div class="checker-area">
           <div class="level-filter">
             <ul class="check-box-filter check-level-list">
@@ -29,13 +28,12 @@
             </ul>
           </div>
 
-          <div class="slot-filter">
-            <div class="checker-label">Slot:</div>
-            <button class="btn-del-slot" type="button" onclick="deleteLastSlotFilterList()">－</button>
-            <ul class="slot-filter-list">
+          <div class="chara-filter">
+            <div class="checker-label">Ban:</div>
+            <button class="btn-add-ban" type="button" onclick="openCharaFilterMenu()"><img src="./img/ban_btn.png"></button>
+            <div class="ban-unit-list" id="ban-unit-list" onwheel="scrollHorizontally()">
               
-            </ul>
-            <button class="btn-add-slot" type="button" onclick="addToSlotFilterList()">＋</button>
+            </div>
           </div>
 
           <div class="cost-filter">
@@ -47,20 +45,58 @@
             </div>
             <input type="number" id="input-max-cost" min="8" max="38" value="38" step="1" onchange="inputMax()">
           </div>
-          <div>
+
+          <div class="slot-filter">
+            <div class="checker-label">Slot:</div>
+            <button class="btn-del-slot" type="button" onclick="deleteLastSlotFilterList()">－</button>
+            <ul id="slot-filter-list">
+              
+            </ul>
+            <button class="btn-add-slot" type="button" onclick="addToSlotFilterList()">＋</button>
+          </div>
+
+          
+          <div class="submit-area">
             <button id="search-btn" type="button">檢索</button>
           </div>
           
         </div>
 
         <div class="result-area">
-          <h2>Result</h2>
+          <div class="result-bar">
+            <h2>Result</h2>
+            <div class="btn-switch-info">
+              <img class="eye" src="./img/eye.png">:
+              <button class="switch" id="show-cost" onclick="showCardCost()">COST</button>
+              <button class="switch on" id="show-slot" onclick="showCardSlot()">色格</button>
+            </div>
+            <div class="bar-border"></div>
+          </div>
           <ul id="result-list">
 
           </ul>
         </div>
 
-        <div class="footer"></div>
+        <div class="chara-filter-popup hidden" id="chara-filter-menu">
+          <ul id="chara-list">
+            
+            <li class="ghost-face"></li>
+            <li class="ghost-face"></li>
+            <li class="ghost-face"></li>
+            <li class="ghost-face"></li>
+            <li class="ghost-face"></li>
+            <li class="ghost-face"></li>
+            <li class="ghost-face"></li>
+          </ul>
+          <div class="menu-bottom">
+            <div class="menu-border"></div>
+            <div class="menu-btn-area">
+              <button class="btn-menu" id="btn-reset" type="button" onclick="resetCharaFilterCheckbox()">Reset</button>
+              <button class="btn-menu" id="btn-submit-ban" type="button" onclick="closeCharaFilterMenu()">Save / Close</button>
+            </div>
+          </div>
+        </div>
     </div>
+    
   </body>
 </html>
