@@ -251,6 +251,7 @@ function render(result) {
     const resultListPanel = function(data){
         $cardData = data;
         render(data);
+        renderCharaFilterMenu();
     }
 
     fetch(REQUESTURL, { mode: 'cors'})
