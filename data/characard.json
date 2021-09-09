@@ -101,25 +101,25 @@
 	,
 	{"cardId":50,"charaName":"利恩","level":"R5","levelNum":10,"hp":12,"atk":10,"def":10,"slotColor":[1,2,2,3,5,6],"cost":28,"imageName":"ch05","charaId":5,"available":true}
 	,
-	{"cardId":51,"charaName":"庫勒尼西","level":"L1","levelNum":1,"hp":7,"atk":4,"def":7,"slotColor":[0],"cost":8,"imageName":"ch06","charaId":6,"available":true}
+	{"cardId":51,"charaName":"庫勒尼西","level":"L1","levelNum":1,"hp":7,"atk":4,"def":8,"slotColor":[0],"cost":8,"imageName":"ch06","charaId":6,"available":true}
 	,
-	{"cardId":52,"charaName":"庫勒尼西","level":"L2","levelNum":2,"hp":7,"atk":4,"def":7,"slotColor":[2],"cost":9,"imageName":"ch06","charaId":6,"available":true}
+	{"cardId":52,"charaName":"庫勒尼西","level":"L2","levelNum":2,"hp":7,"atk":4,"def":8,"slotColor":[2],"cost":9,"imageName":"ch06","charaId":6,"available":true}
 	,
-	{"cardId":53,"charaName":"庫勒尼西","level":"L3","levelNum":3,"hp":7,"atk":4,"def":8,"slotColor":[2,2],"cost":14,"imageName":"ch06","charaId":6,"available":true}
+	{"cardId":53,"charaName":"庫勒尼西","level":"L3","levelNum":3,"hp":7,"atk":4,"def":9,"slotColor":[2,2],"cost":14,"imageName":"ch06","charaId":6,"available":true}
 	,
-	{"cardId":54,"charaName":"庫勒尼西","level":"L4","levelNum":4,"hp":8,"atk":5,"def":8,"slotColor":[2,2,6],"cost":15,"imageName":"ch06","charaId":6,"available":true}
+	{"cardId":54,"charaName":"庫勒尼西","level":"L4","levelNum":4,"hp":8,"atk":5,"def":9,"slotColor":[2,2,6],"cost":15,"imageName":"ch06","charaId":6,"available":true}
 	,
-	{"cardId":55,"charaName":"庫勒尼西","level":"L5","levelNum":5,"hp":9,"atk":5,"def":9,"slotColor":[2,2,6],"cost":18,"imageName":"ch06","charaId":6,"available":true}
+	{"cardId":55,"charaName":"庫勒尼西","level":"L5","levelNum":5,"hp":9,"atk":5,"def":10,"slotColor":[2,2,6],"cost":18,"imageName":"ch06","charaId":6,"available":true}
 	,
-	{"cardId":56,"charaName":"庫勒尼西","level":"R1","levelNum":6,"hp":9,"atk":5,"def":8,"slotColor":[2,2,6,6],"cost":17,"imageName":"ch06","charaId":6,"available":true}
+	{"cardId":56,"charaName":"庫勒尼西","level":"R1","levelNum":6,"hp":9,"atk":5,"def":9,"slotColor":[2,2,6,6],"cost":17,"imageName":"ch06","charaId":6,"available":true}
 	,
-	{"cardId":57,"charaName":"庫勒尼西","level":"R2","levelNum":7,"hp":9,"atk":5,"def":9,"slotColor":[2,2,6,6],"cost":20,"imageName":"ch06","charaId":6,"available":true}
+	{"cardId":57,"charaName":"庫勒尼西","level":"R2","levelNum":7,"hp":9,"atk":5,"def":10,"slotColor":[2,2,6,6],"cost":20,"imageName":"ch06","charaId":6,"available":true}
 	,
 	{"cardId":58,"charaName":"庫勒尼西","level":"R3","levelNum":8,"hp":10,"atk":6,"def":10,"slotColor":[2,2,5,6,6],"cost":21,"imageName":"ch06","charaId":6,"available":true}
 	,
-	{"cardId":59,"charaName":"庫勒尼西","level":"R4","levelNum":9,"hp":11,"atk":6,"def":11,"slotColor":[2,2,5,6,6],"cost":25,"imageName":"ch06","charaId":6,"available":true}
+	{"cardId":59,"charaName":"庫勒尼西","level":"R4","levelNum":9,"hp":11,"atk":7,"def":11,"slotColor":[2,2,5,6,6],"cost":25,"imageName":"ch06","charaId":6,"available":true}
 	,
-	{"cardId":60,"charaName":"庫勒尼西","level":"R5","levelNum":10,"hp":12,"atk":7,"def":11,"slotColor":[2,2,5,5,6,6],"cost":27,"imageName":"ch06","charaId":6,"available":true}
+	{"cardId":60,"charaName":"庫勒尼西","level":"R5","levelNum":10,"hp":12,"atk":8,"def":11,"slotColor":[2,2,5,5,6,6],"cost":27,"imageName":"ch06","charaId":6,"available":true}
 	,
 	{"cardId":61,"charaName":"傑多","level":"L1","levelNum":1,"hp":6,"atk":4,"def":5,"slotColor":[1],"cost":8,"imageName":"ch07","charaId":7,"available":true}
 	,
@@ -281,25 +281,25 @@
 	,
 	{"cardId":140,"charaName":"弗雷特里西","level":"R5","levelNum":10,"hp":13,"atk":10,"def":9,"slotColor":[1,1,3,3,4,7],"cost":28,"imageName":"ch14","charaId":14,"available":true}
 	,
-	{"cardId":141,"charaName":"瑪格莉特","level":"L1","levelNum":1,"hp":6,"atk":5,"def":6,"slotColor":[5],"cost":9,"imageName":"ch15","charaId":15,"available":true}
+	{"cardId":141,"charaName":"瑪格莉特","level":"L1","levelNum":1,"hp":6,"atk":5,"def":7,"slotColor":[5],"cost":9,"imageName":"ch15","charaId":15,"available":true}
 	,
-	{"cardId":142,"charaName":"瑪格莉特","level":"L2","levelNum":2,"hp":7,"atk":6,"def":7,"slotColor":[5],"cost":11,"imageName":"ch15","charaId":15,"available":true}
+	{"cardId":142,"charaName":"瑪格莉特","level":"L2","levelNum":2,"hp":7,"atk":6,"def":8,"slotColor":[5],"cost":11,"imageName":"ch15","charaId":15,"available":true}
 	,
-	{"cardId":143,"charaName":"瑪格莉特","level":"L3","levelNum":3,"hp":8,"atk":7,"def":7,"slotColor":[3,5],"cost":14,"imageName":"ch15","charaId":15,"available":true}
+	{"cardId":143,"charaName":"瑪格莉特","level":"L3","levelNum":3,"hp":8,"atk":7,"def":8,"slotColor":[3,5],"cost":14,"imageName":"ch15","charaId":15,"available":true}
 	,
-	{"cardId":144,"charaName":"瑪格莉特","level":"L4","levelNum":4,"hp":8,"atk":7,"def":8,"slotColor":[3,4,5],"cost":15,"imageName":"ch15","charaId":15,"available":true}
+	{"cardId":144,"charaName":"瑪格莉特","level":"L4","levelNum":4,"hp":8,"atk":7,"def":9,"slotColor":[3,4,5],"cost":15,"imageName":"ch15","charaId":15,"available":true}
 	,
-	{"cardId":145,"charaName":"瑪格莉特","level":"L5","levelNum":5,"hp":9,"atk":7,"def":8,"slotColor":[3,4,5],"cost":18,"imageName":"ch15","charaId":15,"available":true}
+	{"cardId":145,"charaName":"瑪格莉特","level":"L5","levelNum":5,"hp":9,"atk":7,"def":9,"slotColor":[3,4,5],"cost":18,"imageName":"ch15","charaId":15,"available":true}
 	,
-	{"cardId":146,"charaName":"瑪格莉特","level":"R1","levelNum":6,"hp":8,"atk":7,"def":7,"slotColor":[1,3,4,5],"cost":18,"imageName":"ch15","charaId":15,"available":true}
+	{"cardId":146,"charaName":"瑪格莉特","level":"R1","levelNum":6,"hp":8,"atk":7,"def":8,"slotColor":[1,3,4,5],"cost":18,"imageName":"ch15","charaId":15,"available":true}
 	,
-	{"cardId":147,"charaName":"瑪格莉特","level":"R2","levelNum":7,"hp":9,"atk":7,"def":8,"slotColor":[1,3,4,5],"cost":19,"imageName":"ch15","charaId":15,"available":true}
+	{"cardId":147,"charaName":"瑪格莉特","level":"R2","levelNum":7,"hp":9,"atk":7,"def":9,"slotColor":[1,3,4,5],"cost":19,"imageName":"ch15","charaId":15,"available":true}
 	,
-	{"cardId":148,"charaName":"瑪格莉特","level":"R3","levelNum":8,"hp":10,"atk":8,"def":8,"slotColor":[1,3,4,5,7],"cost":21,"imageName":"ch15","charaId":15,"available":true}
+	{"cardId":148,"charaName":"瑪格莉特","level":"R3","levelNum":8,"hp":10,"atk":8,"def":9,"slotColor":[1,3,4,5,7],"cost":21,"imageName":"ch15","charaId":15,"available":true}
 	,
-	{"cardId":149,"charaName":"瑪格莉特","level":"R4","levelNum":9,"hp":11,"atk":9,"def":9,"slotColor":[1,3,4,5,7],"cost":24,"imageName":"ch15","charaId":15,"available":true}
+	{"cardId":149,"charaName":"瑪格莉特","level":"R4","levelNum":9,"hp":11,"atk":9,"def":10,"slotColor":[1,3,4,5,7],"cost":24,"imageName":"ch15","charaId":15,"available":true}
 	,
-	{"cardId":150,"charaName":"瑪格莉特","level":"R5","levelNum":10,"hp":12,"atk":9,"def":10,"slotColor":[1,1,3,4,5,7],"cost":27,"imageName":"ch15","charaId":15,"available":true}
+	{"cardId":150,"charaName":"瑪格莉特","level":"R5","levelNum":10,"hp":12,"atk":9,"def":11,"slotColor":[1,1,3,4,5,7],"cost":27,"imageName":"ch15","charaId":15,"available":true}
 	,
 	{"cardId":151,"charaName":"多妮妲","level":"L1","levelNum":1,"hp":9,"atk":5,"def":3,"slotColor":[2],"cost":9,"imageName":"ch16","charaId":16,"available":true}
 	,
@@ -355,11 +355,11 @@
 	,
 	{"cardId":177,"charaName":"貝琳達","level":"R2","levelNum":7,"hp":11,"atk":7,"def":7,"slotColor":[1,2,4,7],"cost":22,"imageName":"ch18","charaId":18,"available":true}
 	,
-	{"cardId":178,"charaName":"貝琳達","level":"R3","levelNum":8,"hp":12,"atk":7,"def":7,"slotColor":[1,1,2,4,7],"cost":23,"imageName":"ch18","charaId":18,"available":true}
+	{"cardId":178,"charaName":"貝琳達","level":"R3","levelNum":8,"hp":12,"atk":8,"def":7,"slotColor":[1,1,2,4,7],"cost":23,"imageName":"ch18","charaId":18,"available":true}
 	,
-	{"cardId":179,"charaName":"貝琳達","level":"R4","levelNum":9,"hp":13,"atk":8,"def":7,"slotColor":[1,1,2,4,7],"cost":25,"imageName":"ch18","charaId":18,"available":true}
+	{"cardId":179,"charaName":"貝琳達","level":"R4","levelNum":9,"hp":13,"atk":9,"def":8,"slotColor":[1,1,2,4,7],"cost":25,"imageName":"ch18","charaId":18,"available":true}
 	,
-	{"cardId":180,"charaName":"貝琳達","level":"R5","levelNum":10,"hp":14,"atk":8,"def":8,"slotColor":[1,1,2,2,4,7],"cost":29,"imageName":"ch18","charaId":18,"available":true}
+	{"cardId":180,"charaName":"貝琳達","level":"R5","levelNum":10,"hp":14,"atk":9,"def":9,"slotColor":[1,1,2,2,4,7],"cost":29,"imageName":"ch18","charaId":18,"available":true}
 	,
 	{"cardId":181,"charaName":"羅索","level":"L1","levelNum":1,"hp":7,"atk":5,"def":6,"slotColor":[3],"cost":9,"imageName":"ch19","charaId":19,"available":true}
 	,
@@ -471,15 +471,15 @@
 	,
 	{"cardId":235,"charaName":"里斯","level":"L5","levelNum":5,"hp":10,"atk":8,"def":8,"slotColor":[1,3,5],"cost":20,"imageName":"ch24","charaId":24,"available":true}
 	,
-	{"cardId":236,"charaName":"里斯","level":"R1","levelNum":6,"hp":9,"atk":8,"def":7,"slotColor":[1,1,3,5],"cost":20,"imageName":"ch24","charaId":24,"available":true}
+	{"cardId":236,"charaName":"里斯","level":"R1","levelNum":6,"hp":9,"atk":8,"def":7,"slotColor":[1,3,5,6],"cost":20,"imageName":"ch24","charaId":24,"available":true}
 	,
-	{"cardId":237,"charaName":"里斯","level":"R2","levelNum":7,"hp":10,"atk":8,"def":8,"slotColor":[1,1,3,5],"cost":22,"imageName":"ch24","charaId":24,"available":true}
+	{"cardId":237,"charaName":"里斯","level":"R2","levelNum":7,"hp":10,"atk":8,"def":8,"slotColor":[1,3,5,6],"cost":22,"imageName":"ch24","charaId":24,"available":true}
 	,
-	{"cardId":238,"charaName":"里斯","level":"R3","levelNum":8,"hp":11,"atk":9,"def":9,"slotColor":[1,1,3,3,5],"cost":24,"imageName":"ch24","charaId":24,"available":true}
+	{"cardId":238,"charaName":"里斯","level":"R3","levelNum":8,"hp":11,"atk":9,"def":9,"slotColor":[1,3,3,5,6],"cost":24,"imageName":"ch24","charaId":24,"available":true}
 	,
-	{"cardId":239,"charaName":"里斯","level":"R4","levelNum":9,"hp":12,"atk":10,"def":9,"slotColor":[1,1,3,3,5],"cost":26,"imageName":"ch24","charaId":24,"available":true}
+	{"cardId":239,"charaName":"里斯","level":"R4","levelNum":9,"hp":12,"atk":10,"def":9,"slotColor":[1,3,3,5,6],"cost":26,"imageName":"ch24","charaId":24,"available":true}
 	,
-	{"cardId":240,"charaName":"里斯","level":"R5","levelNum":10,"hp":13,"atk":11,"def":9,"slotColor":[1,1,2,3,3,5],"cost":29,"imageName":"ch24","charaId":24,"available":true}
+	{"cardId":240,"charaName":"里斯","level":"R5","levelNum":10,"hp":13,"atk":11,"def":9,"slotColor":[1,3,3,5,5,6],"cost":29,"imageName":"ch24","charaId":24,"available":true}
 	,
 	{"cardId":241,"charaName":"米利安","level":"L1","levelNum":1,"hp":8,"atk":5,"def":4,"slotColor":[6],"cost":9,"imageName":"ch25","charaId":25,"available":true}
 	,
@@ -619,7 +619,7 @@
 	,
 	{"cardId":309,"charaName":"瑪爾瑟斯","level":"R4","levelNum":9,"hp":13,"atk":9,"def":8,"slotColor":[3,3,4,5,6],"cost":26,"imageName":"ch31","charaId":31,"available":true}
 	,
-	{"cardId":310,"charaName":"瑪爾瑟斯","level":"R5","levelNum":10,"hp":15,"atk":11,"def":9,"slotColor":[3,3,4,5,5,6],"cost":28,"imageName":"ch31","charaId":31,"available":true}
+	{"cardId":310,"charaName":"瑪爾瑟斯","level":"R5","levelNum":10,"hp":15,"atk":11,"def":8,"slotColor":[3,3,4,5,5,6],"cost":28,"imageName":"ch31","charaId":31,"available":true}
 	,
 	{"cardId":311,"charaName":"路德","level":"L1","levelNum":1,"hp":7,"atk":5,"def":6,"slotColor":[2],"cost":12,"imageName":"ch32","charaId":32,"available":true}
 	,
@@ -1441,17 +1441,17 @@
 	,
 	{"cardId":720,"charaName":"瑟法斯","level":"R5","levelNum":10,"hp":13,"atk":11,"def":9,"slotColor":[1,1,1,1,3,3],"cost":28,"imageName":"ch72","charaId":72,"available":false}
 	,
-	{"cardId":721,"charaName":"維若妮卡","level":"L1","levelNum":1,"hp":8,"atk":4,"def":5,"slotColor":[2],"cost":9,"imageName":"ch73","charaId":73,"available":true}
+	{"cardId":721,"charaName":"維若妮卡","level":"L1","levelNum":1,"hp":8,"atk":5,"def":6,"slotColor":[2],"cost":9,"imageName":"ch73","charaId":73,"available":true}
 	,
-	{"cardId":722,"charaName":"維若妮卡","level":"L2","levelNum":2,"hp":9,"atk":5,"def":5,"slotColor":[2,5],"cost":11,"imageName":"ch73","charaId":73,"available":true}
+	{"cardId":722,"charaName":"維若妮卡","level":"L2","levelNum":2,"hp":9,"atk":6,"def":6,"slotColor":[2,5],"cost":11,"imageName":"ch73","charaId":73,"available":true}
 	,
-	{"cardId":723,"charaName":"維若妮卡","level":"L3","levelNum":3,"hp":9,"atk":5,"def":6,"slotColor":[2,5],"cost":18,"imageName":"ch73","charaId":73,"available":true}
+	{"cardId":723,"charaName":"維若妮卡","level":"L3","levelNum":3,"hp":9,"atk":6,"def":7,"slotColor":[2,5],"cost":18,"imageName":"ch73","charaId":73,"available":true}
 	,
-	{"cardId":724,"charaName":"維若妮卡","level":"L4","levelNum":4,"hp":10,"atk":6,"def":6,"slotColor":[2,5,6],"cost":19,"imageName":"ch73","charaId":73,"available":true}
+	{"cardId":724,"charaName":"維若妮卡","level":"L4","levelNum":4,"hp":10,"atk":7,"def":7,"slotColor":[2,5,6],"cost":19,"imageName":"ch73","charaId":73,"available":true}
 	,
-	{"cardId":725,"charaName":"維若妮卡","level":"L5","levelNum":5,"hp":10,"atk":6,"def":7,"slotColor":[2,5,6],"cost":22,"imageName":"ch73","charaId":73,"available":true}
+	{"cardId":725,"charaName":"維若妮卡","level":"L5","levelNum":5,"hp":10,"atk":7,"def":8,"slotColor":[2,5,6],"cost":22,"imageName":"ch73","charaId":73,"available":true}
 	,
-	{"cardId":726,"charaName":"維若妮卡","level":"R1","levelNum":6,"hp":10,"atk":6,"def":6,"slotColor":[2,5,6,6],"cost":21,"imageName":"ch73","charaId":73,"available":true}
+	{"cardId":726,"charaName":"維若妮卡","level":"R1","levelNum":6,"hp":10,"atk":7,"def":7,"slotColor":[2,5,6,6],"cost":21,"imageName":"ch73","charaId":73,"available":true}
 	,
 	{"cardId":727,"charaName":"維若妮卡","level":"R2","levelNum":7,"hp":11,"atk":6,"def":7,"slotColor":[2,5,6,6],"cost":25,"imageName":"ch73","charaId":73,"available":false}
 	,
@@ -1542,4 +1542,3 @@
 	{"cardId":770,"charaName":"茱蒂絲","level":"R5","levelNum":10,"hp":13,"atk":11,"def":10,"slotColor":[1,2,2,7,7,7],"cost":33,"imageName":"ch77","charaId":77,"available":false}
 	
 ]
-	
