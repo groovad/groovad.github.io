@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>簡易篩選工具</title>
+    <title>簡易角色篩選工具</title>
     <script defer type="text/javascript" src="./js/index.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="/css/index.css">
   </head>
   <body>
     <div class="banner">
-        <h1>簡易篩選工具</h1>
+        <h1>簡易角色篩選工具</h1>
     </div>
     <div class="container">
         <div class="checker-area">
@@ -55,11 +55,24 @@
             <button class="btn-add-slot" type="button" onclick="addToSlotFilterList()">＋</button>
           </div>
 
-          
-          <div class="submit-area">
-            <button id="search-btn" type="button">檢索</button>
+          <div class="btn-switch-sort">
+            <div class="sort-label">Sort:</div>
+            <label><input id="sort-chara" type="radio" name="sort" value="chara" checked="true"><p class="switch-sort">Chara</p></label>
+            <label><input id="sort-cost" type="radio" name="sort" value="cost"><p class="switch-sort">Cost</p></label>
+            <label><input id="sort-level" type="radio" name="sort" value="level"><p class="switch-sort">Level</p></label>
+            <span class="border">/</span>
+            <label class="switch-order"><input id="order" type="checkbox" name="order" checked="true"><p class="order-text"></p></label>
           </div>
+
+          <div class="btn-switch-unpublished">
+            <div class="unpublished-label">未實裝角色:</div>
+            <label class="switch"><input id="unpublished-chara" type="checkbox" name="unpublished" checked="true"><span class="slider round"></span></label>
+          </div>
+        </div>
+
+        <div class="submit-area">
           
+          <button id="search-btn" type="button">檢索</button>
         </div>
 
         <div class="result-area">
@@ -67,14 +80,13 @@
             <h2>Result</h2>
             <div class="btn-switch-info">
               <img class="eye" src="./img/eye.png">:
-              <button class="switch" id="show-cost" onclick="showCardCost()">COST</button>
-              <button class="switch on" id="show-slot" onclick="showCardSlot()">色格</button>
+              <label><input id="show-cost" type="radio" name="show" onclick="showCardCost()"><p class="switch switch-cost">Cost</p></label>
+              <label><input id="show-slot" type="radio" name="show" checked="true" onclick="showCardSlot()"><p class="switch switch-slot">色格</p></label>
             </div>
             <div class="bar-border"></div>
           </div>
-          <ul id="result-list">
-
-          </ul>
+          <div id="result-list" class="result-list">
+          </div>
         </div>
 
         <div class="chara-filter-popup hidden" id="chara-filter-menu">
