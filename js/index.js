@@ -7,7 +7,7 @@ const DEFINE_STAR_STYLE = [ '<span> &nbsp; </span>',
                             '<span class="yellow-star">★</span>',
                             '<span class="purple-star">★</span>' ];
 
-const DEFINT_CHARA_NAME = [ '',
+const DEFINE_CHARA_NAME = [ '',
                             '艾伯李斯特','艾依查庫','古魯瓦爾多','阿貝爾','利恩','庫勒尼西','傑多','阿奇波爾多','馬庫斯','布列依斯',
                             '雪莉','艾茵','伯恩哈德','弗雷特里西','瑪格莉特','多妮妲','史普拉多','貝琳達','羅索','艾妲',
                             '梅倫','薩爾卡多','蕾格烈芙','里斯','米利安','沃肯','佛羅倫斯','帕茉','阿修羅','布朗寧',
@@ -35,6 +35,8 @@ let $resultList = document.getElementById('result-list');
 let $searchBtn = document.getElementById('search-btn');
 let showCostBtn = document.getElementById('show-cost');
 let showSlotBtn = document.getElementById('show-slot');
+let unpublishedCharaBtn = document.getElementById('unpublished-chara');
+let orderBtn = document.getElementById('order');
 
 let $cardData = [];
 let $showData = [];
@@ -47,7 +49,11 @@ function scrollHorizontally(e) {
 }
 
 function openCharaFilterMenu(){
-    charaFilterMenu.classList.remove("hidden");
+    if (charaFilterMenu.classList.contains("hidden")) {
+        charaFilterMenu.classList.remove("hidden");
+    } else {
+        closeCharaFilterMenu();
+    }
 }
 
 function closeCharaFilterMenu(){
@@ -66,8 +72,8 @@ function renderCharaFilterMenu(){
     let str ='';
     for(i=1;i<78;i++){
         str += `<li class="chara-face">
-                    <label><input type="checkbox" name="ban" value="${i}"><img src="./img/face/ch${i.toString().padStart(2,"0")}_f.png"></label>
-                    <div class="chara-face-name">${DEFINT_CHARA_NAME[i]}</div>
+                    <label><input type="checkbox" name="ban" value="${i}"><img src="./img/face/ch${i.toString().padStart(2,"0")}_f.png">
+                    <div class="chara-face-name">${DEFINE_CHARA_NAME[i]}</div></label>
                 </li>`;
     }
     str += `<li class="ghost-face"></li><li class="ghost-face"></li><li class="ghost-face"></li><li class="ghost-face"></li>
@@ -80,7 +86,7 @@ function submitCharaFilterList() {
     charaFilterList.splice(0,charaFilterList.length);
     let checkedBanBox = [].slice.call(document.querySelectorAll('input[name=ban]:checked'));
     checkedBanBox.forEach( function (i) {
-        str += `<img src="img/unit/ch${i.value.padStart(2,"0")}_unit.png" title="${DEFINT_CHARA_NAME[parseInt(i.value)]}">`; 
+        str += `<img src="img/unit/ch${i.value.padStart(2,"0")}_unit.png" title="${DEFINE_CHARA_NAME[parseInt(i.value)]}">`; 
         charaFilterList.push(parseInt(i.value));
     });
     banUnitList.innerHTML = str;
@@ -162,8 +168,6 @@ function showCardCost(){
     allCharaSlotClass.forEach( function(elem) {
         elem.classList.add("hidden");
     });
-    showCostBtn.classList.add("on");
-    showSlotBtn.classList.remove("on");
 }
 
 function showCardSlot(){
@@ -175,12 +179,10 @@ function showCardSlot(){
     allCharaSlotClass.forEach( function(elem) {
         elem.classList.remove("hidden");
     });
-    showSlotBtn.classList.add("on");
-    showCostBtn.classList.remove("on");
 }
 
 function doSearch(){
-    $showData = [];
+    $showData.splice(0,$showData.length);
     $searchBtn.disabled =true;
     let levelFilterList = [];
     let checkedLevelBox = [].slice.call(document.querySelectorAll('input[name=level]:checked'))
@@ -196,52 +198,149 @@ function doSearch(){
 
     let p_filter = 0,p_data = 0;
     $cardData.forEach( function (data) {
-        if(!charaFilterList.includes(data.charaId)) {
-            if (data.cost >=minCostValue && data.cost <=maxCostValue && levelFilterList.includes(data.level)){
-                if (slotFilterList.length == 0) {
-                    $showData.push(data);
-                } else if (data.slotColor.length >= slotFilterList.length) {
-                    p_filter = 0;
-                    p_data = 0;
-                    do{
-                        if (slotFilterList[p_filter] == data.slotColor[p_data]){
-                            p_filter++;
-                            p_data++;
-                        } else {
-                            p_data++;
-                        }
-                    } while(p_filter<slotFilterList.length && p_data<data.slotColor.length);
-                    if (p_filter == slotFilterList.length) { $showData.push(data); }
+        if (!(data.available || unpublishedCharaBtn.checked))  { return; };
+        if (charaFilterList.includes(data.charaId)) { return; };
+        if (!levelFilterList.includes(data.level))  { return; };
+        if (data.cost < minCostValue || data.cost > maxCostValue ) { return; };
+        if (slotFilterList.length == 0) { $showData.push(data); return; }
+        if (data.slotColor.length >= slotFilterList.length) {
+            p_filter = 0,p_data = 0;
+            do {
+                if (slotFilterList[p_filter] == data.slotColor[p_data]){
+                    p_filter++,p_data++;
+                } else {
+                    p_data++;
                 }
-            }
-        }
+            } while(p_filter<slotFilterList.length && p_data<data.slotColor.length);
+            if (p_filter == slotFilterList.length) { $showData.push(data); }
+        };
     });
-    render($showData);
+    let tag = document.querySelector('input[name=sort]:checked');
+    let order = orderBtn.checked? 1 : -1;
+    render( doSort($showData, tag.value, order), tag.value);
     $searchBtn.disabled =false;
 };
 
-function render(result) {
-    let str = '';
+function doSort(data,sort,order){
+    let mappedData;
+    switch (sort){
+        case 'cost':
+            mappedData = data.map( function(elem,i) {
+                return { index: i, value: elem.cost }
+            })
+            break;
+        case 'chara':
+            mappedData = data.map( function(elem,i) {
+                return { index: i, value: elem.charaId }
+            })
+            break;
+        case 'level':
+            mappedData = data.map( function(elem,i) {
+                return { index: i, value: elem.levelNum }
+            })
+            break;
+        
+    }
+    mappedData.sort( function(a,b){
+        return (a.value - b.value)*order;
+    })
+    
+    return mappedData.map( function(elem) {
+        return data[elem.index]
+    })
+}
+
+function render(sortedResultData, sort) {
+    let str = '<div><ul class="ghost-tag" id="tag-list">';
+    let slotInfoClassStr = '';
+    let costInfoClassStr = '';
+    let cardSlotStr = '';
+    let previousTag = undefined;
+    
+    sortedResultData.forEach( function (data) {
+        if (data.cardId <= 0) { return; }
+
+            switch (sort) {
+                case 'cost' :
+                    if (data.cost != previousTag) {
+                        previousTag = data.cost;
+                        str += `</ul></div>
+                                <div class="tag"><p class="tag-name">Cost:${data.cost}</p>
+                                <ul class="tag-list" id="tag-list">`;
+                        }
+                break;
+                case 'chara' :
+                    if (data.charaId != previousTag) {
+                        previousTag = data.charaId;
+                        str += `</ul></div>
+                                <div class="tag"><p class="tag-name">${data.charaName}</p>
+                                <ul class="tag-list" id="tag-list">`;
+                    }
+                    break;
+                case 'level' :
+                    if (data.levelNum != previousTag) {
+                        previousTag = data.levelNum;
+                        str += `</ul></div>
+                                <div class="tag"><p class="tag-name">${data.level}</p>
+                                <ul class="tag-list" id="tag-list">`;
+                    }
+                    break;
+            }
+            
+            data.slotColor.forEach( function (slot) {
+                cardSlotStr = DEFINE_STAR_STYLE[slot] + cardSlotStr;
+            });
+
+            if (showCostBtn.checked) { slotInfoClassStr = 'hidden'; }
+            if (showSlotBtn.checked) { costInfoClassStr = 'hidden'; }
+
+            str += `
+                    <li class="card-id${data.cardId}">
+                        <p class="chara-level">${data.level}</p>
+                        <img id="card-frame${data.cardId%10}" src="./img/${data.imageName}.png" alt="${data.charaName}">
+                        <div class="chara-slot ${slotInfoClassStr}">${cardSlotStr}</div>
+                        <div class="chara-cost ${costInfoClassStr}">${data.cost}</div>
+                    </li>
+                    `;
+            slotInfoClassStr = '';
+            cardSlotStr = '';
+        }
+    );
+
+    str += `</ul></div>`;
+    
+    $resultList.innerHTML = str;
+}
+
+function initialRender(result) {
+    let str = '<div><ul class="ghost-tag">';
     let tempSlotStr = '';
+    let previousTag = undefined;
     result.forEach( function (data) {
-        if (data.cardId > 0) {
+            if (data.cardId <= 0) { return; }
+
+            if(data.charaId != previousTag) {
+                previousTag = data.charaId;
+                str += `</ul></div>
+                        <div class="tag"><p class="tag-name">${data.charaName}</p>
+                        <ul class="tag-list" id="tag-list">`;
+            }
+
             data.slotColor.forEach( function (slot) {
                 tempSlotStr = DEFINE_STAR_STYLE[slot] + tempSlotStr;
             });
             str += `
-                <li class="card-id${data.cardId}">
-                    <p class="chara-level">${data.level}</p>
-                    <img id="card-frame${data.cardId%10}" src="./img/${data.imageName}.png" alt="${data.charaName}">
-                    <div class="chara-slot">${tempSlotStr}</div>
-                    <div class="chara-cost hidden">${data.cost}</div>
-                </li>
+                    <li class="card-id${data.cardId}">
+                        <p class="chara-level">${data.level}</p>
+                        <img id="card-frame${data.cardId%10}" src="./img/${data.imageName}.png" alt="${data.charaName}">
+                        <div class="chara-slot">${tempSlotStr}</div>
+                        <div class="chara-cost hidden">${data.cost}</div>
+                    </li>
                 `;
             tempSlotStr = '';
         }
-    });
-    str += `<li class="ghost">/*</li><li class="ghost"></li><li class="ghost"></li>
-            <li class="ghost"></li><li class="ghost"></li><li class="ghost"></li>
-            <li class="ghost"></li><li class="ghost"></li><li class="ghost"></li>`;
+    );
+    str += `</ul></div>`;
     $resultList.innerHTML = str;
 };
 
