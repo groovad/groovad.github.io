@@ -349,7 +349,7 @@ function initialRender(result) {
 
     const resultListPanel = function(data){
         $cardData = data;
-        render(data);
+        initialRender(data);
         renderCharaFilterMenu();
     }
 
