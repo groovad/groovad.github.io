@@ -863,19 +863,19 @@
 	,
 	{"cardId":431,"charaName":"庫恩","level":"L1","levelNum":1,"hp":10,"atk":5,"def":1,"slotColor":[2],"cost":9,"imageName":"ch44","charaId":44,"available":true}
 	,
-	{"cardId":432,"charaName":"庫恩","level":"L2","levelNum":2,"hp":11,"atk":6,"def":1,"slotColor":[2,2],"cost":14,"imageName":"ch44","charaId":44,"available":true}
+	{"cardId":432,"charaName":"庫恩","level":"L2","levelNum":2,"hp":11,"atk":6,"def":1,"slotColor":[2,2],"cost":12,"imageName":"ch44","charaId":44,"available":true}
 	,
-	{"cardId":433,"charaName":"庫恩","level":"L3","levelNum":3,"hp":13,"atk":7,"def":1,"slotColor":[2,2],"cost":19,"imageName":"ch44","charaId":44,"available":true}
+	{"cardId":433,"charaName":"庫恩","level":"L3","levelNum":3,"hp":13,"atk":7,"def":1,"slotColor":[2,2],"cost":17,"imageName":"ch44","charaId":44,"available":true}
 	,
-	{"cardId":434,"charaName":"庫恩","level":"L4","levelNum":4,"hp":15,"atk":7,"def":1,"slotColor":[2,2,6],"cost":19,"imageName":"ch44","charaId":44,"available":true}
+	{"cardId":434,"charaName":"庫恩","level":"L4","levelNum":4,"hp":15,"atk":7,"def":1,"slotColor":[2,2,6],"cost":17,"imageName":"ch44","charaId":44,"available":true}
 	,
-	{"cardId":435,"charaName":"庫恩","level":"L5","levelNum":5,"hp":16,"atk":8,"def":1,"slotColor":[2,2,6],"cost":26,"imageName":"ch44","charaId":44,"available":true}
+	{"cardId":435,"charaName":"庫恩","level":"L5","levelNum":5,"hp":16,"atk":8,"def":1,"slotColor":[2,2,6],"cost":23,"imageName":"ch44","charaId":44,"available":true}
 	,
-	{"cardId":436,"charaName":"庫恩","level":"R1","levelNum":6,"hp":15,"atk":7,"def":1,"slotColor":[1,2,2,6],"cost":25,"imageName":"ch44","charaId":44,"available":true}
+	{"cardId":436,"charaName":"庫恩","level":"R1","levelNum":6,"hp":15,"atk":7,"def":1,"slotColor":[1,2,2,6],"cost":23,"imageName":"ch44","charaId":44,"available":true}
 	,
-	{"cardId":437,"charaName":"庫恩","level":"R2","levelNum":7,"hp":16,"atk":8,"def":1,"slotColor":[1,2,2,6],"cost":26,"imageName":"ch44","charaId":44,"available":true}
+	{"cardId":437,"charaName":"庫恩","level":"R2","levelNum":7,"hp":16,"atk":8,"def":1,"slotColor":[1,2,2,6],"cost":24,"imageName":"ch44","charaId":44,"available":true}
 	,
-	{"cardId":438,"charaName":"庫恩","level":"R3","levelNum":8,"hp":18,"atk":9,"def":1,"slotColor":[1,2,2,6,6],"cost":28,"imageName":"ch44","charaId":44,"available":true}
+	{"cardId":438,"charaName":"庫恩","level":"R3","levelNum":8,"hp":18,"atk":9,"def":1,"slotColor":[1,2,2,6,6],"cost":26,"imageName":"ch44","charaId":44,"available":true}
 	,
 	{"cardId":439,"charaName":"庫恩","level":"R4","levelNum":9,"hp":19,"atk":10,"def":1,"slotColor":[1,2,2,6,6],"cost":29,"imageName":"ch44","charaId":44,"available":false}
 	,
