@@ -45,7 +45,7 @@ let $showData = [];
 function scrollHorizontally(e) {
     e = window.event || e;
     var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-    document.getElementById('ban-unit-list').scrollLeft -= (delta * 24); // Multiplied by 40
+    document.getElementById('ban-unit-list').scrollLeft -= (delta * 24);
     e.preventDefault();
 }
 
@@ -345,7 +345,7 @@ function initialRender(result) {
 };
 
 (function() {
-    const REQUESTURL = 'https://raw.githubusercontent.com/groovad/groovad.github.io/gh-pages/data/characard.json';
+    const REQUESTURL = './data/characard.json';
 
     const resultListPanel = function(data) {
         $cardData = data;
